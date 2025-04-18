@@ -1,0 +1,95 @@
+.container-cadastro-email {
+    margin: 65.5px 355.5px;
+}
+
+.container-cadastro {
+    display: flex;    
+    justify-content: center;
+    flex-wrap: wrap;
+    border: black 2px solid;
+    padding: 40px 16px;
+    position: relative;
+}
+
+.titulo-cadastro {
+    font-family: var(--ffamily-inter);
+    font-weight: var(--f-weight-descricao);
+    width: 90%;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.titulo-cadastro span {
+    font-weight: 500;
+}
+
+.campo-email {
+    align-items: center;
+    width: 456px;
+    height: 38px;
+    padding: 7px 15px;
+    
+}
+
+.botao-enviar {
+    background: var(--roxo-meteora);
+    color: var(--branco);
+    border: none;
+    padding: 11px 18px;
+    font-family: var(--ffamily-inter);
+    font-weight: var(--f-weight-titulos);
+    cursor: pointer;
+}
+
+.mensagem-erro {
+    color: red;
+    font-size: 0.9em;
+    position: absolute; /* Posicionamento absoluto */
+    top: 90%; /* Posiciona abaixo do campo de e-mail */
+    left: 13%; /* Alinha à esquerda do campo de e-mail */
+    display: none;
+}
+
+.mensagem-erro.ativo {
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .container-cadastro-email {
+        margin: 38.5px 40px;
+    }
+
+    .titulo-cadastro {
+        width: 80%;
+    }
+    
+    .campo-email {
+       width: 60%; 
+    }
+    
+}
+
+
+@media screen and (max-width: 375px) {
+    .container-cadastro-email {
+       margin: 28px 26px; 
+    }
+
+    
+    .titulo-cadastro {  
+        position: relative;      
+        font-size: 1rem;
+        padding-left: 1.5rem;
+        width: auto;
+    }
+
+    .campo-email {
+        width: auto;
+    }
+
+    .mensagem-erro {
+        font-size: 0.9em;
+        
+    }
+}

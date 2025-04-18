@@ -1,0 +1,94 @@
+{
+  "produtos": [
+    {
+      "imagem": "./assets/image/desktop/imagens-cards/Camiseta.png",
+      "alt": "foto de modelo usando camiseta da loja",
+      "titulo": "Camiseta Conforto",
+      "descricao": "Multicores e tamanhos. Tecido de algodão 100%, fresquinho para o verão. Modelagem unissex.",
+      "preco": "R$ 70,00",
+      "botao": "Ver mais",
+      "datamodal": "modal-1",
+      "categoria": "camisetas"
+    },
+    {
+      "imagem": "./assets/image/desktop/imagens-cards/Calça.png",
+      "alt": "foto de modelo usando calça da loja",
+      "titulo": "Calça Alfaiataria",
+      "descricao": "Modelo Wide Leg alfaiataria em linho. Uma peça pra vida toda!",
+      "preco": "R$ 180,00",
+      "botao": "Ver mais",
+      "datamodal": "modal-2",
+      "categoria": "calças"
+    },
+    {
+      "imagem": "./assets/image/desktop/imagens-cards/Tenis.png",
+      "alt": "foto de modelo usando tenis da loja",
+      "titulo": "Tênis Chunky",
+      "descricao": "Snicker casual com solado mais alto e modelagem robusta. Modelo unissex.",
+      "preco": "R$ 250,00",
+      "botao": "Ver mais",
+      "datamodal": "modal-3",
+      "categoria": "calçados"
+    },
+    {
+      "imagem": "./assets/image/desktop/imagens-cards/Jaqueta.png",
+      "alt": "foto de modelo usando jaqueta jeans da loja",
+      "titulo": "Jaqueta Jeans",
+      "descricao": "Modelo unissex oversized com gola de camurça. Atemporal e autêntica!",
+      "preco": "R$ 150,00",
+      "botao": "Ver mais",
+      "datamodal": "modal-4",
+      "categoria": "casacos"
+    },
+    {
+      "imagem": "./assets/image/desktop/imagens-cards/óculos4.png",
+      "alt": "foto de modelo usando oculos da loja",
+      "titulo": "Óculos Redondo",
+      "descricao": "Armação metálica em grafite com lentes arredondadas. Sem erro!",
+      "preco": "R$ 120,00",
+      "botao": "Ver mais",
+      "datamodal": "modal-5",
+      "categoria": "oculos"
+    },
+    {
+      "imagem": "./assets/image/desktop/imagens-cards/Bolsa.png",
+      "alt": "foto de modelo usando bolsa da loja",
+      "titulo": "Bolsa Coringa",
+      "descricao": "Bolsa camel em couro sintético de alta duração. Ideal para acompanhar você por uma vida!",
+      "preco": "R$ 120,00",
+      "botao": "Ver mais",
+      "datamodal": "modal-6",
+      "categoria": "bolsas"
+    },
+    {
+      "imagem": "./assets/image/desktop/imagens-cards/Jaqueta3.png",
+      "alt": "foto de modelo usando jaqueta jeans da loja",
+      "titulo": "Jaqueta de Couro",
+      "descricao": "Modelo feminino de couro autentico  oversized de couro. Atemporal e autêntica!",
+      "preco": "R$ 350,00",
+      "botao": "Ver mais",
+      "datamodal": "modal-7",
+      "categoria": "casacos"
+    },
+    {
+      "imagem": "./assets/image/desktop/imagens-cards/óculos6.png",
+      "alt": "foto de modelo usando oculos da loja",
+      "titulo": "Óculos de Sol Vintage",
+      "descricao": "Óculos de sol com estilo único para se destacar. Perfeito para o dia a dia!",
+      "preco": "R$ 160,00",
+      "botao": "Ver mais",
+      "datamodal": "modal-8",
+      "categoria": "oculos"
+    },
+    {
+      "imagem": "./assets/image/desktop/imagens-cards/Bolsa2.png",
+      "alt": "foto de modelo usando bolsa da loja",
+      "titulo": "Bolsa Black Coringa",
+      "descricao": "Bolsa camel em couro autentico de alta duração modelo unissex. Ideal para acompanhar você por uma vida!",
+      "preco": "R$ 200,00",
+      "botao": "Ver mais",
+      "datamodal": "modal-9",
+      "categoria": "bolsas"
+    }
+  ]
+}

@@ -1,0 +1,246 @@
+.cabecalho {
+    display: flex;    
+    background-color: var(--cor-preto); 
+    color: var(--branco);
+    height: 58px;
+    padding: 0 23px;
+    width: 100%;    
+}
+
+.container-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    height: 58px;    
+    width: 100%;
+}
+
+.container-cabecalho:nth-child(2) {
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.lista-menu {
+    display: flex;
+    justify-content:flex-start;
+    gap: 40px;
+    padding: 13px;    
+    list-style: none;    
+}
+
+.links-cabecalho {
+    display: flex;
+    justify-content: center;
+    margin-right: 12px;
+    padding-top: 5px;
+    color: var(--branco);
+    font-family: var(--ffamily-inter);
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.links-cabecalho:hover, .botao-buscar:hover {
+    color: var(--verde-meteora);
+}
+
+
+.container-campo-busca {
+    display: flex;
+    gap: 16px;
+    margin-top: 10px;
+}
+
+.botao-buscar {
+    background: var(--cor-preto);
+    color: var(--branco);
+    padding: 9px 12px;
+    border: white 1px solid;
+    font-weight: 500;
+    height: 38px;
+    cursor: pointer;
+}
+
+.campo-busca {     
+    font-size: 15px;
+    padding: 0 15px;  
+    font-weight: 400;  
+    width: 170px;    
+    height: 38px;
+    
+}
+
+.container-botao{
+    display: none;
+}
+
+
+
+/* RESPONSIVIDADES */
+/* Table 768px */
+@media screen and (max-width: 768px) {   
+    .container-botao{
+        display: none;
+    }
+
+
+    .lista-menu {
+        gap: 20px
+    }
+    
+    .logo-cabecalho { 
+        margin-top: 5px;             
+        width: 99px;
+
+    }
+
+    .links-cabecalho {
+        margin-top: 4px;
+        gap: 20px;
+        font-size: 13px;
+        white-space: nowrap;
+    }     
+
+    .campo-busca {
+        width: 145px;                
+    }
+
+    .botao-buscar {
+        padding: 0 10px;
+        font-size: 13px;
+    }
+}
+
+/* Mobile 375px */
+@media screen and (max-width: 375px) {   
+    
+    .cabecalho {
+        flex-direction: column;  
+        align-items: center;        
+        height: auto;       
+        padding:  0;             
+        
+    } 
+    
+    .container-campo-busca {
+        display: flex;        
+        justify-content: center;  
+        padding-bottom:  12px;
+        width: 100%;
+        
+    } 
+
+    .campo-busca {
+        width: 65%; 
+        border: black 1px solid;
+          
+    }
+
+    .botao-buscar {
+        width: 20%;
+        color: transparent;
+        background-color: white;
+        border: black 1px solid; 
+        position: relative;
+        text-align: center;
+          
+    }
+
+    .botao-buscar::after {
+        content: "Search";       
+        color: black;
+        font-weight: 500;        
+        position: absolute; 
+        inset: 0;            
+        display: flex;
+        justify-content: center;
+        align-items: center;        
+    }
+
+
+    .container-cabecalho:nth-child(2){
+        background-color: white;
+        height: 20vw;        
+    }
+    
+    .lista-menu {       
+        display: none;        
+        position: absolute;     
+        top: 0;
+        right: 0;  
+        width: 36vw;
+        z-index: 10;
+        padding-top: 44px; 
+        background-color: var(--cinza-menu-hamb);   
+    }  
+
+    .lista-menu__item:last-child .links-cabecalho {
+        border-bottom: none;
+    }
+  
+    .links-cabecalho {
+        display: flex;
+        justify-content: initial; 
+        margin: 0 14px 10px;      
+        border-bottom: 1px white solid;
+        padding-bottom: 8px;
+        
+    }
+
+    .titulo {
+        color: var(--verde-meteora);
+        font-weight: 700;
+    }
+    
+    
+    .container-botao:checked~ .lista-menu {
+        display: block;
+
+    }     
+    
+    label {               
+        position: absolute;
+        right: 16px;
+              
+    }    
+    
+    .logo-cabecalho {
+        width: 125.7px;
+              
+    }    
+
+    .cabecalho-menu-hamburguer {
+        width: 18px;
+        height: 18px;
+        background-image: url("../assets/image/icon-menu-hamb.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        display: inline-block;
+         
+    } 
+
+    .cabecalho-menu-hamburguer-fechar {
+        position: absolute;
+        top: -34px;  /* Ajuste esse valor para subir mais ou menos */
+        right: 0;
+        width: 18px;
+        height: 18px;
+        background-image: url("../assets/image/x-botao-fechar.svg");
+        background-repeat: no-repeat;
+        background-position: center;                  
+    }
+    
+    .container-cabecalho {
+        display: flex;              
+        align-items: center;
+        padding: 0;
+    }
+
+    .container-imagem {
+        padding: 1em;
+       
+    }
+
+
+} 

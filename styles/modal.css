@@ -1,0 +1,366 @@
+dialog::backdrop {
+    background-color: rgb(0, 0, 0, 0.6);
+    
+}
+
+.modal-ver-mais, #modal-email {
+    width: 700px;
+    font-family: var(--ffamily-inter);    
+}
+
+#modal-email {   
+    height: 130px;
+    overflow: hidden;
+}
+
+.container-conteudo-modal-email {
+    display: flex;    
+    justify-content: flex-start;
+    padding: 16px 0 32px 16px;
+      
+}
+
+.modal-ver-mais, .modal-email {    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;    
+    height: 580px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 0 10px #212529;
+    
+}
+
+/* Cabeçalho do modal */
+.container-cabecalho-modal {
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    gap: 16px;
+    background-color: black;
+    color: white;
+    height: 65px;
+}
+
+.icone-cabecalho-modal {
+    margin-left: 1rem;
+    width: 32px;
+    height: 32px;
+   
+}
+
+.cabecalho-modal {
+   font-size: 20px;
+   font-weight: 500;
+    
+}
+
+.botao-fechar-modal {
+    background-image: url('/assets/image/botao-fechar-modal.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+    border: none;
+    width: 16px;
+    height: 16px;
+    margin-left: 40%;    
+    
+}
+
+.botao-fechar-modal:hover {
+    content: "";
+    background-image: url('/assets/image/botao-fechar-modal-hover.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    margin-left: 40%;    
+    
+}
+
+/* Conteudo do modal */
+
+.container-conteudo-modal {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    
+}
+
+.imagens-produtos-modal{
+    border-radius: 6px;
+    margin: 1rem;
+} 
+
+.titulo-produtos-modal {
+    padding-top: 1rem;
+    font-size: 1rem;
+    font-weight: var(--f-weight-produtos);    
+}
+
+.texto-produtos-modal {
+    font-size: 13px;
+    padding: 24px 0 24px 0;
+    border-bottom: 1px black solid; 
+    width: 96%;   
+}
+
+.subtexto-produtos {
+    font-size: 13px;
+    font-weight: 400;
+    color: #ADB5BD;
+    padding-top: 24px;
+    padding-bottom: 1rem;
+    border-bottom: 1px #D8D8D8 solid;
+    width: 96%; 
+}
+
+.preco-produtos-modal {
+    padding-top: 24px;
+    font-size: 20px;
+    font-weight: var(--f-weight-titulos);
+}
+
+
+.titulo-cores, .titulo-tamanho {
+    font-size: 13px;    
+    font-weight: var(--f-weight-produtos);
+    padding: 16px 0;
+    
+}
+
+.container-cores, .container-tamanho {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 16px;
+    padding-bottom: 1rem;
+}
+
+.titulo-tamanho{
+    border-top: 1px #D8D8D8 solid;     
+    width: 96%;
+}
+
+.botao-radio-cores, .botao-radio-tamanho {
+    display: none;
+}
+
+
+.label-cores, .label-tamanho {   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    color: #333;
+    font-size: 13px;
+    font-weight: var(--f-weight-descricao);
+    gap: 8px;
+}
+
+/* Cores das roupas */
+/* Camisa conforto */
+#azul + .label-cores::before {
+    background-color: #75D7F0;
+}
+
+#offwhite + .label-cores::before {
+    background-color: #F3F6F7;
+}
+
+#preto + .label-cores::before {
+    background-color: black;
+}
+
+/* Calça Alfaiataria */
+#azul-2 + .label-cores::before {
+    background-color: #75D7F0;
+}
+
+#offwhite-2 + .label-cores::before {
+    background-color: #F3F6F7;
+}
+
+#salmao + .label-cores::before {
+    background-color: #fa7f72;
+}
+
+/* Tenis Chunky */
+#vermelho + .label-cores::before {
+    background-color: #fd1d1d;
+}
+
+#branco + .label-cores::before {
+    background-color: #FFFFFF;
+}
+
+#preto-3 + .label-cores::before {
+    background-color: #000000;
+}
+
+/* Jaqueta Jeans */
+#azul-escuro + .label-cores::before {
+    background-color: #010cad;
+}
+
+#preto-4 + .label-cores::before {
+    background-color: black;
+}
+
+#cinza + .label-cores::before {
+    background-color: #b4b2b2;
+}
+
+/* Oculus Redondo */
+#vermelho-5 + .label-cores::before {
+    background-color: #850404;
+}
+
+#dourado + .label-cores::before {
+    background-color:  #FFD700;
+}
+
+#cinza + .label-cores::before {
+    background-color: #b4b2b2;
+}
+
+/* Bolsa Coringa */
+#salmao-2 + .label-cores::before {
+    background-color: #fa7f72;
+}
+
+#cinza-claro + .label-cores::before {
+    background-color: rgba(255, 255, 255, 0.808);
+}
+
+#preto-6 + .label-cores::before {
+    background-color: black;
+}
+
+/* Jaqueta de Couro  */
+#marrom + .label-cores::before {
+    background-color: rgb(165, 91, 42);
+}
+
+#cinza-claro-4 + .label-cores::before {
+    background-color: #b9b7b7;
+}
+
+#preto-7 + .label-cores::before {
+    background-color: black;
+}
+
+/* Oculus de sol */
+#branco-2 + .label-cores::before {
+    background-color: white;
+}
+
+#lilas + .label-cores::before {
+    background-color: #B19CD9;
+}
+
+#rosa + .label-cores::before {
+    background-color: rgb(255, 3, 200);
+}
+
+/* Bolsa de couro */
+#salmao-3 + .label-cores::before {
+    background-color: #fa7f72;
+}
+
+#cinza-claro-2 + .label-cores::before {
+    background-color: #b9b7b7;
+}
+
+#preto-9 + .label-cores::before {
+    background-color: black;
+}
+/* ******************************************* */
+
+/* Estiliza o botão falso */
+.label-cores::before, .label-tamanho::before {
+    content: "";
+    width: 13px;
+    height: 13px;
+    border: 1px solid #DEE2E6; /* Cor da borda */
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+
+/* Quando o radio for selecionado */
+.botao-radio-cores:checked + .label-cores::before, .botao-radio-tamanho:checked + .label-tamanho::before {
+    border: 3px solid;
+    border-color: var(--roxo-meteora); /* Muda a borda também */
+    
+}
+
+.botao-adicionar-sacola {
+    background-color: var(--roxo-meteora);
+    border: none;
+    color: var(--branco);
+    font-size: 1rem;
+    font-weight: var(--f-weight-titulos) ;
+    text-align: center;
+    margin-top: 1rem;
+    padding: 9px 16px;
+    width: 180px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 375px) {
+    .modal-ver-mais, #modal-email {
+        width: 90%;
+    }
+
+
+    .cabecalho-modal {
+        font-size: 20px;
+        font-weight: 500;
+        width: 60%;
+    }
+
+    .botao-fechar-modal, .botao-fechar-modal:hover {
+        margin-left: 1rem;
+    }
+    
+    .container-conteudo-modal {
+        display: block;
+        height: auto; 
+        width: auto;
+        
+    }
+
+  
+    .imagens-produtos-modal {
+        width: 311px;   
+        margin: 0.8rem;     
+    }
+
+    .container-info-produtos {
+        padding-left: 2rem;
+        
+    }
+
+    .label-cores  {        
+        position: relative;        
+        margin-left: 1rem;
+        
+    } 
+    .label-tamanho {
+        position: relative;        
+        margin-left: 1rem;
+    }
+    
+    .botao-adicionar-sacola {
+        margin-bottom: 2rem;
+    }
+    
+
+}

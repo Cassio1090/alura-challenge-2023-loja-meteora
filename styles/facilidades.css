@@ -1,0 +1,100 @@
+.container-facilidades {    
+    justify-content: center;
+    margin-top: 84px;
+    height: auto;
+    
+    background: var(--cor-preto);
+    color: var(--branco);
+    font-family: var(--ffamily-inter);
+    padding: 40px 232px 40px 232px;
+}
+
+ .titulo-facilidades {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: var(--f-weight-titulos);
+    padding: 10px 40px 40px 40px;
+}
+
+.menu-facilidades {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start;   
+    list-style: none;
+    
+} 
+
+.facilidades-itens {
+    display: flex;     
+    justify-content: flex-start; 
+    padding: 2rem;
+    width: 100%;
+    gap: 16px;
+}
+
+.facilidades-itens img {
+    width: 72px;
+    height: 72px;
+    margin: 0 12px;
+}
+
+.container-texto-facilidades {
+    display: flex;
+    flex-direction: column;
+}
+
+.subtitulo-facilidades {
+    color: var(--verde-meteora);
+    font-size: 1rem;
+    font-weight: var(--f-weight-produtos);
+    margin-bottom: 4px;
+}
+
+.texto-facilidades {
+    padding-top: 1.3rem; 
+    font-size: 13px;    
+    font-weight: var(--f-weight-descricao); 
+    width: 200px;    
+}
+
+.facilidades-itens:first-child .texto-facilidades {
+    width: 195px;
+}
+
+@media screen and (max-width: 768px) {
+    .container-facilidades {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .titulo-facilidades {
+        width: 566px;      
+        padding: 0;
+        padding-bottom: 20px;        
+    }
+
+    .menu-facilidades {
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+
+@media screen and (max-width: 375px) {
+    .container-facilidades {
+        padding: 0;
+        
+    }
+
+    .titulo-facilidades {
+        font-size: 24px;
+        text-align: center;
+        width: 313px;      
+        padding: 0;
+        padding-top: 2rem;
+        padding-bottom: 12px;        
+    }
+    
+}

@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./styles.css">
+
+    <title>Loja Meteora</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="container-cabecalho">  
+            <img class="logo-cabecalho container-imagem" src="./assets/image/Logo desktop.svg" alt="logo da loja meteora">
+            <input type="checkbox" id="menu" class="container-botao">
+            <label for="menu">
+                <span class="cabecalho-menu-hamburguer container-imagem"></span>
+            </label>
+            <ul class="lista-menu">
+                <label for="menu">
+                    <span class="cabecalho-menu-hamburguer-fechar container-imagem"></span>
+                </label>                               
+                <li class="lista-menu__item"><a href="index.html" class="links-cabecalho titulo">Home</a></li>   
+                <li class="lista-menu__item"><a href="#" class="links-cabecalho">Nossas lojas</a></li>
+                <li class="lista-menu__item"><a href="#" class="links-cabecalho">Novidades</a></li>
+                <li class="lista-menu__item"><a href="#" class="links-cabecalho">Promoções</a></li>            
+            </ul>
+        </div> 
+        <div class="container-cabecalho">            
+            <div class="container-campo-busca">
+                <input type="text" id="search" class="campo-busca" placeholder="Digite o produto">
+                <button type="button" class="botao-buscar">Buscar</button>
+            </div>           
+        </div>       
+    </header>
+      
+     <!-- Carrossel   -->
+    <section class="container-carrosel">
+         <!-- Slider main container   -->
+        <div class="swiper">
+              <!-- If we need pagination  -->
+            <div class="swiper-pagination"></div>  
+              <!-- Additional required wrapper   -->
+            <div class="swiper-wrapper">
+                 <!-- Slides   -->
+                <div class="swiper-slide"><img class="imagem-carrossel" src="./assets/image/desktop/banner_carousel_1_1440.png" 
+                    srcset="
+                    ./assets/image/desktop/banner_carousel_1_1440.png 1440w,
+                    ./assets/image/tablet/banner_carousel_1_768.png 768w,
+                    ./assets/image/mobile/banner_carousel_1_375.png 375w"
+                    sizes="(max-width: 768px) 768px, (max-width: 375px) 375px, 1440px"
+                    alt="Imagem 1 banner" >
+                </div>
+                <div class="swiper-slide"><img class="imagem-carrossel" src="./assets/image/desktop/banner_carousel_2_1440.png" 
+                    srcset="
+                    ./assets/image/desktop/banner_carousel_2_1440.png 1440w,
+                    ./assets/image/tablet/banner_carousel_2_768.png 768w,
+                    ./assets/image/mobile/banner_carousel_2_375.png 375w"
+                    sizes="(max-width: 768px) 768px, (max-width: 375px) 375px, 1440px" 
+                    alt="Imagem 2 banner" >
+                </div>
+                <div class="swiper-slide"><img class="imagem-carrossel" src="./assets/image/desktop/banner_carousel_3_1440.png" 
+                    srcset="
+                    ./assets/image/desktop/banner_carousel_3_1440.png 1440w,
+                    ./assets/image/tablet/banner_carousel_3_768.png 768w,
+                    ./assets/image/mobile/banner_carousel_3_375.png 375w" 
+                    sizes="(max-width: 768px) 768px, (max-width: 375px) 375px, 1440px"
+                    alt="Imagem 3 banner" >
+                </div>            
+            </div>
+           
+        
+              <!-- If we need navigation buttons   -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>        
+            
+        </div>
+    </section> 
+
+    <!-- Busca por categoria -->
+     <section class="container-busca-categorias">
+         <h2 class="titulo-categorias">Busque por categoria:</h2>
+         <div class="container-itens-categorias">
+             <ul class="menu-categorias">
+                    <li href="#" class="categorias-itens">
+                        <button class="btn btn-camisetas" href="#" id="btnFiltrarCamisetas" value="camisetas">Camisetas</button>
+                        <img src="./assets/image/desktop/categorias/Categoria camiseta.png" alt="imagem de camiseta">
+                    </li>
+                    <li href="#" class="categorias-itens">
+                        <button class="btn btn-bolsas" href="#" id="btnFiltrarBolsas" value="bolsas">Bolsas</button>
+                        <img src="./assets/image/desktop/categorias/Categoria Bolsa.png" alt="imagem de bolsa">
+                    </li>
+                    <li href="#" class="categorias-itens">
+                        <button class="btn btn-calcados" href="#" id="btnFiltrarCalcados" value="calçados">Calçados</button>
+                        <img src="./assets/image/desktop/categorias/Categoria Calçados.png" alt="imagem de calçados">
+                    </li>
+                    <li href="#" class="categorias-itens">
+                        <button class="btn btn-calcas" href="#" id="btnFiltrarCalca" value="calças">Calças</button>
+                        <img src="./assets/image/desktop/categorias/Categoria calça.png" alt="imagem de calça">
+                    </li>
+                    <li href="#" class="categorias-itens">
+                        <button class="btn btn-casacos" href="#" id="btnFiltrarCasacos" value="casacos">Casacos</button>
+                        <img src="./assets/image/desktop/categorias/Categoria casacos.png" alt="imagem de casaco">
+                    </li>
+                    <li href="#" class="categorias-itens">
+                        <button class="btn btn-oculos" href="#" id="btnFiltrarOculos" value="oculos">Óculos</button>
+                        <img src="./assets/image/desktop/categorias/Categoria óculos.png" alt="imagem de oculos">
+                    </li>
+                </ul>
+            </div>            
+    </section>
+        
+    <!-- Produtos bombando -->
+     <section class="container-produtos-bombando" id="produtos">
+        <!--<h2 class="titulo-bombando">Produtos que estão bombando!</h2>
+        <div class="container-produtos">
+            <div class="itens-produtos">
+                    <img class="imagens-produtos" src="./assets/image/desktop/imagens-cards/Camiseta.png" alt="foto de modelo usando camiseta da loja">
+                    <h3 class="titulo-produtos">Camiseta Conforto</h3>
+                    <p class="texto-produtos">Multicores e tamanhos. Tecido de algodão 100%, fresquinho para o verão. Modelagem unissex.</p>
+                    <p class="preco-produtos">R$ 70,00</p>
+                    <div class="tags">
+                        <span class="tag">camisetas</span>
+                    </div>
+                    <button class="botao-ver-mais" data-modal="modal-1">Ver mais</button>
+                </div>
+                <div class="itens-produtos">
+                    <img class="imagens-produtos" src="./assets/image/desktop/imagens-cards/Calça.png" alt="foto de modelo usando calça da loja">
+                    <h3 class="titulo-produtos">Calça Alfaiataria</h3>
+                    <p class="texto-produtos">Modelo Wide Leg alfaiataria em linho. Uma peça pra vida toda!</p>
+                    <p class="preco-produtos">R$ 180,00</p>
+                    <button class="botao-ver-mais" data-modal="modal-2">Ver mais</button>
+                </div>
+                <div class="itens-produtos">
+                    <img class="imagens-produtos" src="./assets/image/desktop/imagens-cards/Tenis.png" alt="foto de modelo usando tenis da loja">
+                    <h3 class="titulo-produtos">Tênis Chunky</h3>
+                    <p class="texto-produtos">Snicker casual com solado mais alto e modelagem robusta. Modelo unissex.</p>
+                    <p class="preco-produtos">R$ 250,00</p>
+                    <button class="botao-ver-mais" data-modal="modal-3">Ver mais</button>
+                </div>
+                <div class="itens-produtos">
+                    <img class="imagens-produtos" src="./assets/image/desktop/imagens-cards/Jaqueta.png" alt="foto de modelo usando jaqueta jeans da loja">
+                    <h3 class="titulo-produtos">Jaqueta Jeans</h3>
+                    <p class="texto-produtos">Modelo unissex oversized com gola de camurça. Atemporal e autêntica!</p>
+                    <p class="preco-produtos">R$ 150,00</p>
+                    <button class="botao-ver-mais" data-modal="modal-4" >Ver mais</button>
+                </div>
+                <div class="itens-produtos">
+                    <img class="imagens-produtos" src="./assets/image/desktop/imagens-cards/óculos4.png" alt="foto de modelo usando oculos da loja">
+                    <h3 class="titulo-produtos">Óculos Redondo</h3>
+                    <p class="texto-produtos">Armação metálica em grafite com lentes arredondadas. Sem erro!</p>
+                    <p class="preco-produtos">R$ 120,00</p>
+                    <button class="botao-ver-mais" data-modal="modal-5">Ver mais</button>
+                </div>
+                <div class="itens-produtos">
+                    <img class="imagens-produtos" src="./assets/image/desktop/imagens-cards/Bolsa.png" alt="foto de modelo usando bolsa da loja">
+                    <h3 class="titulo-produtos">Bolsa coringa</h3>
+                    <p class="texto-produtos">Bolsa camel em couro sintético de alta duração. Ideal para acompanhar você por uma vida!</p>
+                    <p class="preco-produtos">R$ 120,00</p>
+                    <button class="botao-ver-mais" data-modal="modal-6">Ver mais</button>
+                </div>
+            </div>-->
+            
+     </section>     
+     
+     <!-- Seção modal VER MAIS -->
+      <section class="container-modal" id="modais">
+        <dialog id="modal-1" data-modal="modal-1" class="modal-ver-mais">
+            <div class="container-cabecalho-modal">
+                <img class="icone-cabecalho-modal" src="./assets/image/check-circle-modal.svg" alt="imagem do circulo do modal">
+                <h2 class="cabecalho-modal">Confira detalhes sobre o produto</h2>
+                <button class="botao-fechar-modal"></button>
+            </div>
+            <div class="container-conteudo-modal">
+                <img class="imagens-produtos-modal" src="./assets/image/desktop/imagens-cards/Camiseta.png" alt="foto de modelo usando camiseta da loja">
+                <div class="container-info-produtos">
+                    <h3 class="titulo-produtos-modal">Camiseta Conforto</h3>
+                    <p class="texto-produtos-modal">Multicores e tamanhos. Tecido de algodão 100%, fresquinho para o verão. Modelagem unissex.</p>
+                    <p class="preco-produtos-modal">R$ 70,00</p>
+                    <p class="subtexto-produtos">Vendido e entregue por Riachuelo</p>
+                    <p class="titulo-cores">Cores:</p>
+                    <div class="container-cores">
+                        <div class="radio-container">
+                            <input class="botao-radio-cores" type="radio" id="azul" name="cores_da_roupa" value="Azul claro">
+                            <label class="label-cores" for="azul">Azul claro</label>
+                        </div>
+                        <div class="radio-container">
+                            <input class="botao-radio-cores" type="radio" id="offwhite" name="cores_da_roupa" value="Offwhite">
+                            <label class="label-cores" for="offwhite">Offwhite</label>
+                        </div>
+                        <div class="radio-container">
+                            <input class="botao-radio-cores" type="radio" id="preto" name="cores_da_roupa" value="Preto">
+                            <label class="label-cores" for="preto">Preto</label>
+                        </div>        
+                    </div>
+                    <p class="titulo-tamanho">Tamanho:</p>
+                    <div class="container-tamanho">
+                        <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-p" type="radio" name="tamanho" value="p">
+                            <label class="label-tamanho" for="tam-p">P</label>
+                        </div>
+                        <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-pp" type="radio" name="tamanho" value="pp">
+                            <label class="label-tamanho" for="tam-pp">PP</label>
+                        </div>
+                        <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-m" type="radio" name="tamanho" value="m">
+                            <label class="label-tamanho" for="tam-m">M</label>
+                        </div>
+                        <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-g" type="radio" name="tamanho" value="g">
+                            <label class="label-tamanho" for="tam-g">G</label>
+                        </div>
+                        <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-gg" type="radio" name="tamanho" value="gg">
+                            <label class="label-tamanho" for="tam-gg">GG</label>
+                        </div>
+                    </div>
+                    <button class="botao-adicionar-sacola">Adicionar à sacola</button>
+                </div>
+            </div>
+        </dialog>
+        <!-- ***************************************************************** -->
+        <dialog id="modal-2" data-modal="modal-2" class="modal-ver-mais">
+            <div class="container-cabecalho-modal">
+                <img class="icone-cabecalho-modal" src="./assets/image/check-circle-modal.svg" alt="imagem do circulo do modal">
+                <h2 class="cabecalho-modal">Confira detalhes sobre o produto</h2>
+                <button class="botao-fechar-modal"></button>
+            </div>
+            <div class="container-conteudo-modal">
+                <img class="imagens-produtos-modal" src="./assets/image/desktop/imagens-cards/Calça.png" alt="foto de modelo usando camiseta da loja">
+                <div class="container-info-produtos">
+                    <h3 class="titulo-produtos-modal">Calça Alfaiataria</h3>
+                    <p class="texto-produtos-modal">Modelo Wide Leg alfaiataria em linho. Uma peça pra vida toda!</p>
+                    <p class="preco-produtos-modal">R$ 180,00</p>
+                    <p class="subtexto-produtos">Vendido e entregue por Renner</p>
+                    <p class="titulo-cores">Cores:</p>
+                    <div class="container-cores">
+                        <div class="radio-container">
+                            <input class="botao-radio-cores" type="radio" id="azul-2" name="cores_da_roupa-2" value="Azul claro">
+                            <label class="label-cores" for="azul-2">Azul claro</label>
+                        </div>
+                        <div class="radio-container">
+                            <input class="botao-radio-cores" type="radio" id="offwhite-2" name="cores_da_roupa-2" value="Offwhite">
+                            <label class="label-cores" for="offwhite-2">Branco</label>
+                        </div>
+                        <div class="radio-container">
+                            <input class="botao-radio-cores" type="radio" id="salmao" name="cores_da_roupa-2" value="salmao">
+                            <label class="label-cores" for="salmao">Salmão</label>
+                        </div>        
+                    </div>
+                    <p class="titulo-tamanho">Tamanho:</p>
+                    <div class="container-tamanho">
+                        <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-p-2" type="radio" name="tamanho-2" value="p">
+                            <label class="label-tamanho" for="tam-p-2">P</label>
+                        </div>
+                        <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-pp-2" type="radio" name="tamanho-2" value="pp">
+                            <label class="label-tamanho" for="tam-pp-2">PP</label>
+                        </div>
+                        <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-m-2" type="radio" name="tamanho-2" value="m">
+                            <label class="label-tamanho" for="tam-m-2">M</label>
+                        </div>
+                        <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-g-2" type="radio" name="tamanho-2" value="g">
+                            <label class="label-tamanho" for="tam-g-2">G</label>
+                        </div>
+                        <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-gg-2" type="radio" name="tamanho-2" value="gg">
+                            <label class="label-tamanho" for="tam-gg-2">GG</label>
+                        </div>
+                    </div>
+                    <button class="botao-adicionar-sacola">Adicionar à sacola</button>
+                </div>
+            </div>
+        </dialog>
+        <!-- ***************************************************************** -->
+        <dialog id="modal-3" data-modal="modal-3" class="modal-ver-mais">
+            <div class="container-cabecalho-modal">
+                <img class="icone-cabecalho-modal" src="./assets/image/check-circle-modal.svg" alt="imagem do circulo do modal">
+                <h2 class="cabecalho-modal">Confira detalhes sobre o produto</h2>
+                <button class="botao-fechar-modal"></button>
+            </div>
+            <div class="container-conteudo-modal">
+                <img class="imagens-produtos-modal" src="./assets/image/desktop/imagens-cards/Tenis.png" alt="foto de modelo usando camiseta da loja">
+                <div class="container-info-produtos">
+                    <h3 class="titulo-produtos-modal">Tênis Chunky</h3>
+                    <p class="texto-produtos-modal">Snicker casual com solado mais alto e modelagem robusta. Modelo unissex.</p>
+                    <p class="preco-produtos-modal">R$ 250,00</p>
+                    <p class="subtexto-produtos">Vendido e entregue por Netshoes</p>
+                    <p class="titulo-cores">Cores:</p>
+                    <div class="container-cores">
+                        <div class="radio-container">
+                            <input class="botao-radio-cores" type="radio" id="vermelho" name="cores_da_roupa-3" value="vermelho">
+                            <label class="label-cores" for="vermelho">Vermelho</label>
+                        </div>
+                        <div class="radio-container">
+                            <input class="botao-radio-cores" type="radio" id="branco" name="cores_da_roupa-3" value="branco">
+                            <label class="label-cores" for="branco">Branco</label>
+                        </div>
+                        <div class="radio-container">
+                            <input class="botao-radio-cores" type="radio" id="preto-3" name="cores_da_roupa-3" value="Preto">
+                            <label class="label-cores" for="preto-3">Preto</label>
+                        </div>        
+                    </div>
+                    <p class="titulo-tamanho">Tamanho:</p>
+                    <div class="container-tamanho">
+                        <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-p-3" type="radio" name="tamanho-3" value="p">
+                            <label class="label-tamanho" for="tam-p-3">35</label>
+                        </div>
+                        <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-pp-3" type="radio" name="tamanho-3" value="pp">
+                            <label class="label-tamanho" for="tam-pp-3">38</label>
+                        </div>
+                        <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-m-3" type="radio" name="tamanho-3" value="m">
+                            <label class="label-tamanho" for="tam-m-3">39</label>
+                        </div>
+                        <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-g-3" type="radio" name="tamanho-3" value="g">
+                            <label class="label-tamanho" for="tam-g-3">41</label>
+                        </div>
+                        <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-gg-3" type="radio" name="tamanho-3" value="gg">
+                            <label class="label-tamanho" for="tam-gg-3">42</label>
+                        </div>
+                    </div>
+                    <button class="botao-adicionar-sacola">Adicionar à sacola</button>
+                </div>
+            </div>
+        </dialog>
+        <!-- ***************************************************************** -->
+        <dialog id="modal-4" data-modal="modal-4" class="modal-ver-mais">
+            <div class="container-cabecalho-modal">
+                <img class="icone-cabecalho-modal" src="./assets/image/check-circle-modal.svg" alt="imagem do circulo do modal">
+                <h2 class="cabecalho-modal">Confira detalhes sobre o produto</h2>
+                <button class="botao-fechar-modal"></button>
+            </div>
+            <div class="container-conteudo-modal">
+                <img class="imagens-produtos-modal" src="./assets/image/desktop/imagens-cards/Jaqueta.png" alt="foto de modelo usando camiseta da loja">
+                <div class="container-info-produtos">
+                    <h3 class="titulo-produtos-modal">Jaqueta Jeans</h3>
+                    <p class="texto-produtos-modal">Modelo unissex oversized com gola de camurça. Atemporal e autêntica!</p>
+                    <p class="preco-produtos-modal">R$ 150,00</p>
+                    <p class="subtexto-produtos">Vendido e entregue por Renner</p>
+                    <p class="titulo-cores">Cores:</p>
+                    <div class="container-cores">
+                        <div class="radio-container">
+                            <input class="botao-radio-cores" type="radio" id="azul-escuro" name="cores_da_roupa-4" value="Azul escuro">
+                            <label class="label-cores" for="azul-escuro">Azul escuro</label>
+                        </div>
+                        <div class="radio-container">
+                            <input class="botao-radio-cores" type="radio" id="preto-4" name="cores_da_roupa-4" value="Preto">
+                            <label class="label-cores" for="preto-4">Preto</label>
+                        </div>
+                        <div class="radio-container">
+                            <input class="botao-radio-cores" type="radio" id="cinza" name="cores_da_roupa-4" value="Cinza">
+                            <label class="label-cores" for="cinza">Cinza</label>
+                        </div>        
+                    </div>
+                    <p class="titulo-tamanho">Tamanho:</p>
+                    <div class="container-tamanho">
+                        <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-p-4" type="radio" name="tamanho-4" value="p">
+                            <label class="label-tamanho" for="tam-p-4">P</label>
+                        </div>
+                        <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-pp-4" type="radio" name="tamanho-4" value="pp">
+                            <label class="label-tamanho" for="tam-pp-4">PP</label>
+                        </div>
+                        <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-m-4" type="radio" name="tamanho-4" value="m">
+                            <label class="label-tamanho" for="tam-m-4">M</label>
+                        </div>
+                        <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-g-4" type="radio" name="tamanho-4" value="g">
+                            <label class="label-tamanho" for="tam-g-4">G</label>
+                        </div>
+                        <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-gg-4" type="radio" name="tamanho-4" value="gg">
+                            <label class="label-tamanho" for="tam-gg-4">GG</label>
+                        </div>
+                    </div>
+                    <button class="botao-adicionar-sacola">Adicionar à sacola</button>
+                </div>
+            </div>
+        </dialog>
+         <!-- ***************************************************************** -->
+         <dialog id="modal-5" data-modal="modal-5" class="modal-ver-mais">
+            <div class="container-cabecalho-modal">
+                <img class="icone-cabecalho-modal" src="./assets/image/check-circle-modal.svg" alt="imagem do circulo do modal">
+                <h2 class="cabecalho-modal">Confira detalhes sobre o produto</h2>
+                <button class="botao-fechar-modal"></button>
+            </div>
+            <div class="container-conteudo-modal">
+                <img class="imagens-produtos-modal" src="./assets/image/desktop/imagens-cards/Óculos4.png" alt="foto de modelo usando camiseta da loja">
+                <div class="container-info-produtos">
+                    <h3 class="titulo-produtos-modal">Óculos Redondo</h3>
+                    <p class="texto-produtos-modal">Armação metálica em grafite com lentes arredondadas. Sem erro!</p>
+                    <p class="preco-produtos-modal">R$ 120,00</p>
+                    <p class="subtexto-produtos">Vendido e entregue por Chilli beans</p>
+                    <p class="titulo-cores">Cores:</p>
+                    <div class="container-cores">
+                        <div class="radio-container">
+                            <input class="botao-radio-cores" type="radio" id="vermelho-5" name="cores_da_roupa-5" value="Vermelho escuro">
+                            <label class="label-cores" id="azul-claro" for="vermelho-5">Vermelho Escuro</label>
+                        </div>
+                        <div class="radio-container">
+                            <input class="botao-radio-cores" type="radio" id="dourado" name="cores_da_roupa-5" value="Dourado">
+                            <label class="label-cores" id="offbranco" for="dourado">Dourado</label>
+                        </div>
+                        <div class="radio-container">
+                            <input class="botao-radio-cores" type="radio" id="preto-5" name="cores_da_roupa-5" value="Preto">
+                            <label class="label-cores" for="preto-5">Preto</label>
+                        </div>        
+                    </div>
+                    <p class="titulo-tamanho">Tamanho:</p>
+                    <div class="container-tamanho">
+                        <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-p-5" type="radio" name="tamanho-5" value="p">
+                            <label class="label-tamanho" for="tam-p-5">Padrão</label>
+                        </div>
+                        <!-- <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-pp-5" type="radio" name="tamanho-5" value="pp">
+                            <label class="label-tamanho" for="tam-pp-5">PP</label>
+                        </div>
+                        <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-m-5" type="radio" name="tamanho-5" value="m">
+                            <label class="label-tamanho" for="tam-m-5">M</label>
+                        </div>
+                        <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-g-5" type="radio" name="tamanho-5" value="g">
+                            <label class="label-tamanho" for="tam-g-5">G</label>
+                        </div>
+                        <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-gg-5" type="radio" name="tamanho-5" value="gg">
+                            <label class="label-tamanho" for="tam-gg-5">GG</label>
+                        </div> -->
+                    </div>
+                    <button class="botao-adicionar-sacola">Adicionar à sacola</button>
+                </div>
+            </div>
+        </dialog>
+         <!-- ***************************************************************** -->
+         <dialog id="modal-6" data-modal="modal-6" class="modal-ver-mais">
+            <div class="container-cabecalho-modal">
+                <img class="icone-cabecalho-modal" src="./assets/image/check-circle-modal.svg" alt="imagem do circulo do modal">
+                <h2 class="cabecalho-modal">Confira detalhes sobre o produto</h2>
+                <button class="botao-fechar-modal"></button>
+            </div>
+            <div class="container-conteudo-modal">
+                <img class="imagens-produtos-modal" src="./assets/image/desktop/imagens-cards/Bolsa.png" alt="foto de modelo usando camiseta da loja">
+                <div class="container-info-produtos">
+                    <h3 class="titulo-produtos-modal">Bolsa Coringa</h3>
+                    <p class="texto-produtos-modal">Bolsa camel em couro sintético de alta duração. Ideal para acompanhar você por uma vida!</p>
+                    <p class="preco-produtos-modal">R$ 120,00</p>
+                    <p class="subtexto-produtos">Vendido e entregue por Marisa</p>
+                    <p class="titulo-cores">Cores:</p>
+                    <div class="container-cores">
+                        <div class="radio-container">
+                            <input class="botao-radio-cores" type="radio" id="salmao-2" name="cores_da_roupa-6" value="Salmão">
+                            <label class="label-cores" id="azul-claro" for="salmao-2">Salmão</label>
+                        </div>
+                        <div class="radio-container">
+                            <input class="botao-radio-cores" type="radio" id="cinza-claro" name="cores_da_roupa-6" value="cinza claro">
+                            <label class="label-cores" id="offbranco" for="cinza-claro">Cinza Claro</label>
+                        </div>
+                        <div class="radio-container">
+                            <input class="botao-radio-cores" type="radio" id="preto-6" name="cores_da_roupa-6" value="Preto">
+                            <label class="label-cores" for="preto-6">Preto</label>
+                        </div>        
+                    </div>
+                    <p class="titulo-tamanho">Tamanho:</p>
+                    <div class="container-tamanho">
+                        <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-p-6" type="radio" name="tamanho-6" value="p">
+                            <label class="label-tamanho" for="tam-p-6">Padrão</label>
+                        </div>
+                        <!-- <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-pp-6" type="radio" name="tamanho-6" value="pp">
+                            <label class="label-tamanho" for="tam-pp-6">PP</label>
+                        </div>
+                        <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-m-6" type="radio" name="tamanho-6" value="m">
+                            <label class="label-tamanho" for="tam-m-6">M</label>
+                        </div>
+                        <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-g-6" type="radio" name="tamanho-6" value="g">
+                            <label class="label-tamanho" for="tam-g-6">G</label>
+                        </div>
+                        <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-gg-6" type="radio" name="tamanho-6" value="gg">
+                            <label class="label-tamanho" for="tam-gg-6">GG</label>
+                        </div> -->
+                    </div>
+                    <button class="botao-adicionar-sacola">Adicionar à sacola</button>
+                </div>
+            </div>
+        </dialog>
+
+        <dialog id="modal-7" data-modal="modal-7" class="modal-ver-mais">
+            <div class="container-cabecalho-modal">
+                <img class="icone-cabecalho-modal" src="./assets/image/check-circle-modal.svg" alt="imagem do circulo do modal">
+                <h2 class="cabecalho-modal">Confira detalhes sobre o produto</h2>
+                <button class="botao-fechar-modal"></button>
+            </div>
+            <div class="container-conteudo-modal">
+                <img class="imagens-produtos-modal" src="./assets/image/desktop/imagens-cards/Jaqueta3.png" alt="foto de modelo usando camiseta da loja">
+                <div class="container-info-produtos">
+                    <h3 class="titulo-produtos-modal">Jaqueta de Couro</h3>
+                    <p class="texto-produtos-modal">Modelo feminino de couro autentico  oversized de couro. Atemporal e autêntica!</p>
+                    <p class="preco-produtos-modal">R$ 350,00</p>
+                    <p class="subtexto-produtos">Vendido e entregue por Renner</p>
+                    <p class="titulo-cores">Cores:</p>
+                    <div class="container-cores">
+                        <div class="radio-container">
+                            <input class="botao-radio-cores" type="radio" id="marrom" name="cores_da_roupa-7" value="Salmão">
+                            <label class="label-cores" for="marrom">Marrom</label>
+                        </div>
+                        <div class="radio-container">
+                            <input class="botao-radio-cores" type="radio" id="cinza-claro-4" name="cores_da_roupa-7" value="cinza claro">
+                            <label class="label-cores" for="cinza-claro-4">Cinza Claro</label>
+                        </div>
+                        <div class="radio-container">
+                            <input class="botao-radio-cores" type="radio" id="preto-7" name="cores_da_roupa-7" value="Preto">
+                            <label class="label-cores" for="preto-7">Preto</label>
+                        </div>        
+                    </div>
+                    <p class="titulo-tamanho">Tamanho:</p>
+                    <div class="container-tamanho">
+                        <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-p-7" type="radio" name="tamanho-6" value="p">
+                            <label class="label-tamanho" for="tam-p-7">P</label>
+                        </div>
+                        <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-pp-7" type="radio" name="tamanho-6" value="pp">
+                            <label class="label-tamanho" for="tam-pp-7">PP</label>
+                        </div>
+                        <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-m-7" type="radio" name="tamanho-6" value="m">
+                            <label class="label-tamanho" for="tam-m-7">M</label>
+                        </div>
+                        <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-g-7" type="radio" name="tamanho-6" value="g">
+                            <label class="label-tamanho" for="tam-g-7">G</label>
+                        </div>
+                        <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-gg-7" type="radio" name="tamanho-6" value="gg">
+                            <label class="label-tamanho" for="tam-gg-7">GG</label>
+                        </div>
+                    </div>
+                    <button class="botao-adicionar-sacola">Adicionar à sacola</button>
+                </div>
+            </div>
+        </dialog>
+
+        <dialog id="modal-8" data-modal="modal-8" class="modal-ver-mais">
+            <div class="container-cabecalho-modal">
+                <img class="icone-cabecalho-modal" src="./assets/image/check-circle-modal.svg" alt="imagem do circulo do modal">
+                <h2 class="cabecalho-modal">Confira detalhes sobre o produto</h2>
+                <button class="botao-fechar-modal"></button>
+            </div>
+            <div class="container-conteudo-modal">
+                <img class="imagens-produtos-modal" src="./assets/image/desktop/imagens-cards/Óculos6.png" alt="foto de modelo usando camiseta da loja">
+                <div class="container-info-produtos">
+                    <h3 class="titulo-produtos-modal">Óculos de Sol Vintage</h3>
+                    <p class="texto-produtos-modal">Óculos de sol com estilo único para se destacar. Perfeito para o dia a dia!"</p>
+                    <p class="preco-produtos-modal">R$ 160,00</p>
+                    <p class="subtexto-produtos">Vendido e entregue por Chilli beans</p>
+                    <p class="titulo-cores">Cores:</p>
+                    <div class="container-cores">
+                        <div class="radio-container">
+                            <input class="botao-radio-cores" type="radio" id="branco-2" name="cores_da_roupa-8" value="Salmão">
+                            <label class="label-cores" for="branco-2">Branco</label>
+                        </div>
+                        <div class="radio-container">
+                            <input class="botao-radio-cores" type="radio" id="lilas" name="cores_da_roupa-8" value="cinza claro">
+                            <label class="label-cores" for="lilas">Lilas</label>
+                        </div>
+                        <div class="radio-container">
+                            <input class="botao-radio-cores" type="radio" id="rosa" name="cores_da_roupa-8" value="Preto">
+                            <label class="label-cores" for="rosa">Rosa</label>
+                        </div>        
+                    </div>
+                    <p class="titulo-tamanho">Tamanho:</p>
+                    <div class="container-tamanho">
+                        <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-p-8" type="radio" name="tamanho-8" value="p">
+                            <label class="label-tamanho" for="tam-p-8">Padrão</label>
+                        </div>
+                        <!-- <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-pp-6" type="radio" name="tamanho-6" value="pp">
+                            <label class="label-tamanho" for="tam-pp-6">PP</label>
+                        </div>
+                        <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-m-6" type="radio" name="tamanho-6" value="m">
+                            <label class="label-tamanho" for="tam-m-6">M</label>
+                        </div>
+                        <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-g-6" type="radio" name="tamanho-6" value="g">
+                            <label class="label-tamanho" for="tam-g-6">G</label>
+                        </div>
+                        <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-gg-6" type="radio" name="tamanho-6" value="gg">
+                            <label class="label-tamanho" for="tam-gg-6">GG</label>
+                        </div> -->
+                    </div>
+                    <button class="botao-adicionar-sacola">Adicionar à sacola</button>
+                </div>
+            </div>
+        </dialog>
+
+        <dialog id="modal-9" data-modal="modal-9" class="modal-ver-mais">
+            <div class="container-cabecalho-modal">
+                <img class="icone-cabecalho-modal" src="./assets/image/check-circle-modal.svg" alt="imagem do circulo do modal">
+                <h2 class="cabecalho-modal">Confira detalhes sobre o produto</h2>
+                <button class="botao-fechar-modal"></button>
+            </div>
+            <div class="container-conteudo-modal">
+                <img class="imagens-produtos-modal" src="./assets/image/desktop/imagens-cards/Bolsa2.png" alt="foto de modelo usando camiseta da loja">
+                <div class="container-info-produtos">
+                    <h3 class="titulo-produtos-modal">Bolsa Black Coringa</h3>
+                    <p class="texto-produtos-modal">Bolsa camel em couro autentico de alta duração modelo unissex. Ideal para acompanhar você por uma vida!</p>
+                    <p class="preco-produtos-modal">R$ 200,00</p>
+                    <p class="subtexto-produtos">Vendido e entregue por Marisa</p>
+                    <p class="titulo-cores">Cores:</p>
+                    <div class="container-cores">
+                        <div class="radio-container">
+                            <input class="botao-radio-cores" type="radio" id="salmao-3" name="cores_da_roupa-9" value="Salmão">
+                            <label class="label-cores" id="azul-claro" for="salmao-3">Salmão</label>
+                        </div>
+                        <div class="radio-container">
+                            <input class="botao-radio-cores" type="radio" id="cinza-claro-2" name="cores_da_roupa-9" value="cinza claro">
+                            <label class="label-cores" id="offbranco" for="cinza-claro-2">Cinza Claro</label>
+                        </div>
+                        <div class="radio-container">
+                            <input class="botao-radio-cores" type="radio" id="preto-9" name="cores_da_roupa-9" value="Preto">
+                            <label class="label-cores" id="preto-radio" for="preto-9">Preto</label>
+                        </div>        
+                    </div>
+                    <p class="titulo-tamanho">Tamanho:</p>
+                    <div class="container-tamanho">
+                        <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-p-9" type="radio" name="tamanho-9" value="p">
+                            <label class="label-tamanho" for="tam-p-9">Padrão</label>
+                        </div>
+                        <!-- <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-pp-6" type="radio" name="tamanho-6" value="pp">
+                            <label class="label-tamanho" for="tam-pp-6">PP</label>
+                        </div>
+                        <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-m-6" type="radio" name="tamanho-6" value="m">
+                            <label class="label-tamanho" for="tam-m-6">M</label>
+                        </div>
+                        <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-g-6" type="radio" name="tamanho-6" value="g">
+                            <label class="label-tamanho" for="tam-g-6">G</label>
+                        </div>
+                        <div class="radio-tamanho-container">
+                            <input class="botao-radio-tamanho" id="tam-gg-6" type="radio" name="tamanho-6" value="gg">
+                            <label class="label-tamanho" for="tam-gg-6">GG</label>
+                        </div> -->
+                    </div>
+                    <button class="botao-adicionar-sacola">Adicionar à sacola</button>
+                </div>
+            </div>
+        </dialog>
+
+      </section>
+
+     <!-- Seção facilidades -->
+      <section class="container-facilidades">
+        <h2 class="titulo-facilidades">Conheça todas as nossas facilidades</h2>
+            <div class="container-facilidades-itens">
+                <ul class="menu-facilidades">
+                    <li class="facilidades-itens">
+                        <img src="/assets/image/desktop/icones/x-diamond (2).png" alt="">
+                        <div class="container-texto-facilidades">
+                            <p class="subtitulo-facilidades">PAGUE PELO PIX</p>
+                            <p class="texto-facilidades">Ganhe 5% OFF em pagamentos via PIX.</p>
+                        </div>
+                    </li>
+                    <li class="facilidades-itens">
+                        <img src="/assets/image/desktop/icones/arrow-repeat (2).png" alt="">
+                        <div class="container-texto-facilidades">
+                            <p class="subtitulo-facilidades">TROCA GRÁTIS</p>
+                            <p class="texto-facilidades">Fique livre para trocar em até 30 dias.</p>
+                        </div>
+                    </li>
+                    <li class="facilidades-itens">
+                        <img src="/assets/image/desktop/icones/flower1 (3).png" alt="">
+                        <div class="container-texto-facilidades">
+                            <p class="subtitulo-facilidades">SUSTENTABILIDADE<p>
+                            <p class="texto-facilidades">Moda responsável, que respeita o meio ambiente.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+      </section>
+
+    <!-- Seção modal EMAIL -->
+    <section class="container-modal">
+    <dialog id="modal-email" class="modal-email">
+            <div class="container-cabecalho-modal">
+                <img class="icone-cabecalho-modal" src="./assets/image/check-circle-modal.svg" alt="imagem do circulo do modal">
+                <h2 class="cabecalho-modal">E-mail cadastrado com sucesso!</h2>
+                <button class="botao-fechar-modal"></button>
+            </div>
+            <div class="container-conteudo-modal-email">
+                <p class="texto-modal-email">Em breve você receberá novidades exclusivas da Meteora.</p>
+            </div>
+        </dialog>
+     </section>
+
+    <!-- Seção do cadastro do email -->
+     <section class="container-cadastro-email">
+        <form class="container-cadastro">
+            <label class="titulo-cadastro" for="email">Quer receber nossas novidades, promoções exclusivas e 10% OFF na primeira compra? <span>Cadastre-se!</span></label>
+            <input class="campo-email" id="email" name="email" type="email" pattern="/^[^\s@]+@[^\s@]+\.[^\s@]+$/" placeholder="Digite seu email" minlength="4" required />
+            <span id="email-erro" class="mensagem-erro"></span>
+            <button type="submit" class="botao-enviar" >Enviar</button>
+        </form>
+     </section>
+    
+    <!-- Footer -->
+     <footer class="container-footer">
+        <p>2023 © Desenvolvido por Alura | Projeto fictício sem fins comerciais.</p>    
+     </footer>
+     
+
+    <script src="app/metodoExibirProdutos.js"></script>
+    <script src="app/modal.js"></script>
+    <script src="app/metodoFilter.js"></script>
+    <script src="app/metodoFilterSearchBar.js"></script>
+    <script src="app/metodoVerficarEmail.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            autoplay: {
+             delay: 4000,
+            },
+            loop:true,             
+            speed: 400,            
+            slidesPerView: 1,
+            pagination: {
+                el: '.swiper-pagination',
+                type:'bullets',
+            },           
+            768: {
+                slidesPerView: 1,
+                spaceBetween: 0
+            },
+            375: {
+                slidesPerView: 1,
+                spaceBetween: 0
+            }
+            
+        });
+    </script>
+</body>
+</html>

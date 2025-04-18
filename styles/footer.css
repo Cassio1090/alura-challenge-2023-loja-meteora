@@ -1,0 +1,17 @@
+.container-footer {
+    display: flex;
+    justify-content: center;
+    padding: 17px;
+    background-color: var(--cor-preto);
+    color: var(--branco);
+    font-family: var(--ffamily-inter);
+    font-weight: var(--f-weight-descricao);
+    font-size: 13px;
+}
+
+@media screen and (max-width: 375px) {
+    .container-footer {
+        text-align: center;
+        padding: 17px 64px;
+    }
+}
